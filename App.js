@@ -19,6 +19,11 @@ const App = () => {
       <QRCodeScanner
         onRead={onRead}
         // flashMode={RNCamera.Constants.FlashMode.torch}
+        cameraStyle={{width:400,height:400}}
+        topContent={<Text>Hello</Text>}
+        showMarker={true}
+        containerStyle={{alignItems:"center"}}
+        markerStyle={{borderColor:"red",}}
       />
     </View>
   );
@@ -28,7 +33,9 @@ export default App;
 
 const styles = StyleSheet.create({
   container:{
-    width:200,
-    height:200
+    flex:1,
+    alignItems:"center",
+    justifyContent:"center",
+    backgroundColor:"rgba(0,0,0,0.4)"
   }
 });
